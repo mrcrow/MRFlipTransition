@@ -23,6 +23,7 @@
 		C165A30619715D7D008C5A18 /* FlipDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C165A30519715D7D008C5A18 /* FlipDemoTests.m */; };
 		C165A31119715D9E008C5A18 /* MRFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C165A31019715D9E008C5A18 /* MRFlipTransition.m */; };
 		C165A31319715DA3008C5A18 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = C165A31219715DA3008C5A18 /* demo.gif */; };
+		C165A3191971619D008C5A18 /* AnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C165A3181971619D008C5A18 /* AnotherViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		C165A30F19715D9E008C5A18 /* MRFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFlipTransition.h; sourceTree = SOURCE_ROOT; };
 		C165A31019715D9E008C5A18 /* MRFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFlipTransition.m; sourceTree = SOURCE_ROOT; };
 		C165A31219715DA3008C5A18 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = SOURCE_ROOT; };
+		C165A3171971619D008C5A18 /* AnotherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherViewController.h; sourceTree = "<group>"; };
+		C165A3181971619D008C5A18 /* AnotherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				C165A2EC19715D7D008C5A18 /* Main.storyboard */,
 				C165A2EF19715D7D008C5A18 /* ViewController.h */,
 				C165A2F019715D7D008C5A18 /* ViewController.m */,
+				C165A3171971619D008C5A18 /* AnotherViewController.h */,
+				C165A3181971619D008C5A18 /* AnotherViewController.m */,
 				C165A2F219715D7D008C5A18 /* Images.xcassets */,
 				C165A2E119715D7D008C5A18 /* Supporting Files */,
 			);
@@ -259,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C165A2F119715D7D008C5A18 /* ViewController.m in Sources */,
+				C165A3191971619D008C5A18 /* AnotherViewController.m in Sources */,
 				C165A2EB19715D7D008C5A18 /* AppDelegate.m in Sources */,
 				C165A31119715D9E008C5A18 /* MRFlipTransition.m in Sources */,
 				C165A2E719715D7D008C5A18 /* main.m in Sources */,

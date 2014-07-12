@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "AnotherViewController.h"
+#import "MRFlipTransition.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong)   MRFlipTransition    *animator;
 @end
 
 @implementation ViewController
@@ -17,13 +19,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *launchButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 210, 60)];
+    launchButton.backgroundColor = [UIColor blackColor];
+    [launchButton setTitle:@"Present" forState:UIControlStateNormal];
+    [launchButton addTarget:self action:@selector(showAnotherController:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:launchButton];
+    
+    self.animator = [[MRFlipTransition alloc] initWithPresentingViewController:self presentBlock:^UIViewController *{
+        return [[AnotherViewController alloc] initWithNibName:nil bundle:nil];
+    }];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)showAnotherController:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.animator presentFrom:MRFlipTransitionPresentingFromBottom completion:nil];
 }
 
 @end
