@@ -21,6 +21,8 @@
 		C165A2FC19715D7D008C5A18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C165A2DE19715D7D008C5A18 /* UIKit.framework */; };
 		C165A30419715D7D008C5A18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C165A30219715D7D008C5A18 /* InfoPlist.strings */; };
 		C165A30619715D7D008C5A18 /* FlipDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C165A30519715D7D008C5A18 /* FlipDemoTests.m */; };
+		C165A31119715D9E008C5A18 /* MRFlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C165A31019715D9E008C5A18 /* MRFlipTransition.m */; };
+		C165A31319715DA3008C5A18 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = C165A31219715DA3008C5A18 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		C165A30119715D7D008C5A18 /* FlipDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlipDemoTests-Info.plist"; sourceTree = "<group>"; };
 		C165A30319715D7D008C5A18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C165A30519715D7D008C5A18 /* FlipDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipDemoTests.m; sourceTree = "<group>"; };
+		C165A30F19715D9E008C5A18 /* MRFlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRFlipTransition.h; sourceTree = SOURCE_ROOT; };
+		C165A31019715D9E008C5A18 /* MRFlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRFlipTransition.m; sourceTree = SOURCE_ROOT; };
+		C165A31219715DA3008C5A18 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,8 @@
 		C165A2E019715D7D008C5A18 /* FlipDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C165A30F19715D9E008C5A18 /* MRFlipTransition.h */,
+				C165A31019715D9E008C5A18 /* MRFlipTransition.m */,
 				C165A2E919715D7D008C5A18 /* AppDelegate.h */,
 				C165A2EA19715D7D008C5A18 /* AppDelegate.m */,
 				C165A2EC19715D7D008C5A18 /* Main.storyboard */,
@@ -126,6 +133,7 @@
 		C165A2E119715D7D008C5A18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C165A31219715DA3008C5A18 /* demo.gif */,
 				C165A2E219715D7D008C5A18 /* FlipDemo-Info.plist */,
 				C165A2E319715D7D008C5A18 /* InfoPlist.strings */,
 				C165A2E619715D7D008C5A18 /* main.m */,
@@ -229,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C165A2F319715D7D008C5A18 /* Images.xcassets in Resources */,
+				C165A31319715DA3008C5A18 /* demo.gif in Resources */,
 				C165A2E519715D7D008C5A18 /* InfoPlist.strings in Resources */,
 				C165A2EE19715D7D008C5A18 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +260,7 @@
 			files = (
 				C165A2F119715D7D008C5A18 /* ViewController.m in Sources */,
 				C165A2EB19715D7D008C5A18 /* AppDelegate.m in Sources */,
+				C165A31119715D9E008C5A18 /* MRFlipTransition.m in Sources */,
 				C165A2E719715D7D008C5A18 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
