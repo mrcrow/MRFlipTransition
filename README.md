@@ -14,8 +14,6 @@ To update the `presentedViewController's` snapshot during the transition, overri
 
     [(MRFlipTransition *)self.transitioningDelegate updateContentSnapshot:self.view afterScreenUpdate:YES];
 
-> Hint: To present `UINavigationController` or `UITabBarController` and update snapshot, *MUST* create category and override `viewWillAppear` as well
-
 Requirement
 ===========
 * iOS 7.0
