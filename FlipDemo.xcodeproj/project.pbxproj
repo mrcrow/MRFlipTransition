@@ -395,6 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlipDemo/FlipDemo-Prefix.pch";
 				INFOPLIST_FILE = "FlipDemo/FlipDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -408,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlipDemo/FlipDemo-Prefix.pch";
 				INFOPLIST_FILE = "FlipDemo/FlipDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -472,6 +474,7 @@
 				C165A30B19715D7D008C5A18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C165A30C19715D7D008C5A18 /* Build configuration list for PBXNativeTarget "FlipDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +483,7 @@
 				C165A30E19715D7D008C5A18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

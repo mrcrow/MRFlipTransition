@@ -20,20 +20,19 @@
 {
     [super viewDidLoad];
     
+    self.animator = [[MRFlipTransition alloc] initWithPresentingViewController:self];
+    
     UIButton *launchButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 210, 60)];
     launchButton.backgroundColor = [UIColor blackColor];
     [launchButton setTitle:@"Present" forState:UIControlStateNormal];
     [launchButton addTarget:self action:@selector(showAnotherController:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:launchButton];
-    
-    self.animator = [[MRFlipTransition alloc] initWithPresentingViewController:self presentBlock:^UIViewController *{
-        return [[AnotherViewController alloc] initWithNibName:nil bundle:nil];
-    }];
 }
 
 - (void)showAnotherController:(id)sender
 {
-    [self.animator presentFrom:MRFlipTransitionPresentingFromBottom completion:nil];
+    AnotherViewController *controller = [[AnotherViewController alloc] initWithNibName:nil bundle:nil];
+    [self.animator present:controller from:MRFlipTransitionPresentingFromInfinityAway completion:nil];
 }
 
 @end

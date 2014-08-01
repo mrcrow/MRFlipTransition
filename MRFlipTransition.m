@@ -122,8 +122,6 @@
 
 @end
 
-typedef UIViewController *(^MRFlipTransitionReturnBlock)(void);
-
 @interface MRFlipTransition ()
 
 @property (nonatomic, strong)                   UIImage                         *contentImage;
@@ -131,7 +129,6 @@ typedef UIViewController *(^MRFlipTransitionReturnBlock)(void);
 @property (nonatomic, weak)                     UIViewController                *presentingViewController;
 @property (assign)                              MRFlipTransitionPresentingStyle style;
 @property (nonatomic, strong)                   MRTransformView                 *transformView;
-@property (copy, nonatomic)                     MRFlipTransitionReturnBlock     presentBlock;
 @property (nonatomic, strong)                   UIView                          *shadowView;
 
 @end
@@ -145,15 +142,14 @@ static CGFloat          const MRInfinityFactor = 0.01;
 
 @implementation MRFlipTransition
 
-- (instancetype)initWithPresentingViewController:(UIViewController *)controller presentBlock:(UIViewController *(^)(void))block
+- (instancetype)initWithPresentingViewController:(UIViewController *)controller;
 {
-    NSParameterAssert(controller && block);
+    NSParameterAssert(controller);
     self = [super init];
     if (self)
     {
         _presentAnimation = YES;
         _presentingViewController = controller;
-        _presentBlock = block;
         _shadowView = [[UIView alloc] initWithFrame:CGRectZero];
         _shadowView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.8];
         _shadowView.layer.opacity = 0.0;
@@ -162,18 +158,17 @@ static CGFloat          const MRInfinityFactor = 0.01;
     return self;
 }
 
-- (void)presentFrom:(MRFlipTransitionPresentingStyle)direction completion:(void(^)(void))completion
+- (void)present:(UIViewController *)viewController from:(MRFlipTransitionPresentingStyle)direction completion:(void (^)(void))completion
 {
-    UIViewController *controller = self.presentBlock();
-    if (!_presentAnimation || !controller || self.presentingViewController.presentedViewController)
+    if (!_presentAnimation || !viewController || self.presentingViewController.presentedViewController)
     {
         return;
     }
  
     _style = direction;
-    controller.modalPresentationStyle = UIModalPresentationCustom;
-    controller.transitioningDelegate = self;
-    [self.presentingViewController presentViewController:controller animated:YES completion:completion];
+    viewController.modalPresentationStyle = UIModalPresentationCustom;
+    viewController.transitioningDelegate = self;
+    [self.presentingViewController presentViewController:viewController animated:YES completion:completion];
 }
 
 - (void)dismissTo:(MRFlipTransitionPresentingStyle)direction completion:(void(^)(void))completion

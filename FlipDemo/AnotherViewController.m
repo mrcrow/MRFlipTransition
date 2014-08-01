@@ -18,6 +18,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     
     UIButton *launchButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 210, 60)];
     launchButton.backgroundColor = [UIColor blackColor];
@@ -34,7 +35,7 @@
 
 - (void)flyAway:(id)sender
 {
-    [(MRFlipTransition *)self.transitioningDelegate dismissTo:MRFlipTransitionPresentingFromInfinityAway completion:nil];
+    [(MRFlipTransition *)self.transitioningDelegate dismissTo:MRFlipTransitionPresentingFromBottom completion:nil];
 }
 
 @end

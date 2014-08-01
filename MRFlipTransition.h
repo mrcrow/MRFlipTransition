@@ -17,8 +17,8 @@ typedef NS_ENUM(NSInteger, MRFlipTransitionPresentingStyle) {
 
 @property (nonatomic, strong)   UIImage *coverImage;
 
-- (instancetype)initWithPresentingViewController:(UIViewController *)controller presentBlock:(UIViewController *(^)(void))block;
-- (void)presentFrom:(MRFlipTransitionPresentingStyle)direction completion:(void(^)(void))completion;
+- (instancetype)initWithPresentingViewController:(UIViewController *)controller;
+- (void)present:(UIViewController *)viewController from:(MRFlipTransitionPresentingStyle)direction completion:(void(^)(void))completion;
 - (void)dismissTo:(MRFlipTransitionPresentingStyle)direction completion:(void(^)(void))completion;
 
 - (void)updateContentSnapshot:(UIView *)view afterScreenUpdate:(BOOL)update;
