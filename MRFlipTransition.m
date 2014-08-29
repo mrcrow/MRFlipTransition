@@ -7,6 +7,7 @@
 //
 
 #import "MRFlipTransition.h"
+#import "UIViewController+MRFlipTransitino.h"
 
 @interface MRGradientShadowedLayer : CALayer
 
@@ -164,7 +165,7 @@ static CGFloat          const MRInfinityFactor = 0.01;
     {
         return;
     }
- 
+
     _style = direction;
     viewController.modalPresentationStyle = UIModalPresentationCustom;
     viewController.transitioningDelegate = self;
@@ -219,6 +220,9 @@ static CGFloat          const MRInfinityFactor = 0.01;
 {
     UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+
+    UIView *fromView = [fromViewController viewForTransitionContext:transitionContext];
+    UIView *toView = [toViewController viewForTransitionContext:transitionContext];
     UIView *containerView = [transitionContext containerView];
     
     _transformView.upperFrontLayer.contents = (__bridge id)(self.coverImage.CGImage);
@@ -231,10 +235,10 @@ static CGFloat          const MRInfinityFactor = 0.01;
         [self prepareLayersWithCompletionBlock:^{
             
             CGRect endFrame = fromViewController.view.bounds;
-            toViewController.view.frame = endFrame;
-            toViewController.view.alpha = 0.0;
+            toView.frame = endFrame;
+            toView.alpha = 0.0;
             
-            [containerView addSubview:toViewController.view];
+            [containerView addSubview:toView];
             [containerView addSubview:_shadowView];
             [containerView addSubview:_transformView];
             
@@ -257,7 +261,7 @@ static CGFloat          const MRInfinityFactor = 0.01;
                         }
                         
                         _presentAnimation = isCancelled;
-                        toViewController.view.alpha = isCancelled ? 0.0 : 1.0;
+                        toView.alpha = isCancelled ? 0.0 : 1.0;
                         [transitionContext completeTransition:!isCancelled];
                     }];
                 }];
@@ -268,8 +272,8 @@ static CGFloat          const MRInfinityFactor = 0.01;
     {
         [self updateContentSnapshot:fromViewController.view afterScreenUpdate:NO];
         
-        [fromViewController.view removeFromSuperview];
-        [containerView addSubview:toViewController.view];
+        [fromView removeFromSuperview];
+        [containerView addSubview:toView];
         [containerView addSubview:_shadowView];
         [containerView addSubview:_transformView];
         

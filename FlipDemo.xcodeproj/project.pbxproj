@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10C521319B058E400357885 /* UIViewController+MRFlipTransitino.m in Sources */ = {isa = PBXBuildFile; fileRef = C10C521219B058E400357885 /* UIViewController+MRFlipTransitino.m */; };
 		C165A2DB19715D7D008C5A18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C165A2DA19715D7D008C5A18 /* Foundation.framework */; };
 		C165A2DD19715D7D008C5A18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C165A2DC19715D7D008C5A18 /* CoreGraphics.framework */; };
 		C165A2DF19715D7D008C5A18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C165A2DE19715D7D008C5A18 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C10C521119B058E400357885 /* UIViewController+MRFlipTransitino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MRFlipTransitino.h"; sourceTree = "<group>"; };
+		C10C521219B058E400357885 /* UIViewController+MRFlipTransitino.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MRFlipTransitino.m"; sourceTree = "<group>"; };
 		C165A2D719715D7D008C5A18 /* FlipDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlipDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C165A2DA19715D7D008C5A18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C165A2DC19715D7D008C5A18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 			children = (
 				C165A30F19715D9E008C5A18 /* MRFlipTransition.h */,
 				C165A31019715D9E008C5A18 /* MRFlipTransition.m */,
+				C10C521119B058E400357885 /* UIViewController+MRFlipTransitino.h */,
+				C10C521219B058E400357885 /* UIViewController+MRFlipTransitino.m */,
 				C165A2E919715D7D008C5A18 /* AppDelegate.h */,
 				C165A2EA19715D7D008C5A18 /* AppDelegate.m */,
 				C165A2EC19715D7D008C5A18 /* Main.storyboard */,
@@ -268,6 +273,7 @@
 				C165A2EB19715D7D008C5A18 /* AppDelegate.m in Sources */,
 				C165A31119715D9E008C5A18 /* MRFlipTransition.m in Sources */,
 				C165A2E719715D7D008C5A18 /* main.m in Sources */,
+				C10C521319B058E400357885 /* UIViewController+MRFlipTransitino.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
