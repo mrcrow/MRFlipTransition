@@ -10,31 +10,31 @@
 	<string>FlipDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D40DE4B2-941A-4193-B889-271003578012</key>
-		<string>https://github.com/mrcrow/MRFlipTransition.git</string>
+		<key>09FAB217D751F16B079172168E1B8C7F81AEF02D</key>
+		<string>https://github.com/auto234875/MRFlipTransition.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>FlipDemo.xcodeproj/project.xcworkspace</string>
+	<string>FlipDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D40DE4B2-941A-4193-B889-271003578012</key>
+		<key>09FAB217D751F16B079172168E1B8C7F81AEF02D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mrcrow/MRFlipTransition.git</string>
+	<string>https://github.com/auto234875/MRFlipTransition.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D40DE4B2-941A-4193-B889-271003578012</string>
+	<string>09FAB217D751F16B079172168E1B8C7F81AEF02D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D40DE4B2-941A-4193-B889-271003578012</string>
+			<string>09FAB217D751F16B079172168E1B8C7F81AEF02D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>FlipDemo</string>
+			<string>MRFlipTransition</string>
 		</dict>
 	</array>
 </dict>
