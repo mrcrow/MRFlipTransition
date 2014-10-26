@@ -18,13 +18,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor blackColor];
+    UIView *dismissView= [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    [self.view addSubview:dismissView];
+    UISwipeGestureRecognizer *dismissGesture= [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(flyAway:)];
+    dismissGesture.direction= UISwipeGestureRecognizerDirectionDown;
+    [dismissView addGestureRecognizer:dismissGesture];
     
-    UIButton *launchButton = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 210, 60)];
-    launchButton.backgroundColor = [UIColor blackColor];
-    [launchButton setTitle:@"Dismiss" forState:UIControlStateNormal];
-    [launchButton addTarget:self action:@selector(flyAway:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:launchButton];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -37,5 +38,6 @@
 {
     [(MRFlipTransition *)self.transitioningDelegate dismissTo:MRFlipTransitionPresentingFromBottom completion:nil];
 }
+
 
 @end
